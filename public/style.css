@@ -1,0 +1,86 @@
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+    background-image: linear-gradient(to right, #e00000 0%, #e20606 100%);
+    margin-top: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    /* add code below to also center horizontally */
+    align-items: center;
+    height: 100%;
+}
+
+.box {
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+}
+
+.content {
+    display: block; 
+    text-align: left;
+}
+
+h1.content {
+    font-size: 47px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow:
+         3px 3px 0 #000,
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px 1px 0 #000,
+         1px 1px 0 #000;
+}
+
+ p.content {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow:
+         3px 3px 0 #000,
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px 1px 0 #000,
+         1px 1px 0 #000;
+}
+
+@media screen and (max-width: 600px) {
+    
+    .box {
+            min-width: max-content;
+            text-align: center;
+    }
+
+    .content {
+         display: block; 
+         text-align: left;
+    }
+
+    h1.content  {
+        font-size: 40px;
+        font-weight: 700;
+        color: #fff;
+        text-shadow:
+         3px 3px 0 #000,
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px 1px 0 #000,
+         1px 1px 0 #000;
+    }
+
+    p.content  {
+        font-size: 25px;
+        font-weight: 700;
+        text-shadow:
+         3px 3px 0 #000,
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px 1px 0 #000,
+         1px 1px 0 #000;
+    }
+
+}
