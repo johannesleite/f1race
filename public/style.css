@@ -1,7 +1,7 @@
 html, body {
     height: 100%;
     font-family: 'Titillium Web', sans-serif;
-    background-image: linear-gradient(to right, #e00000 0%, #e20606 100%);
+    background:#e10600;
     margin-top: 0;
 }
 
