@@ -2,7 +2,6 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 const https = require('https')
-const port = 3001
 
 app.set('view engine', 'ejs');
 
@@ -42,4 +41,11 @@ app.get('/', (req, res) => {
 })
 
 
-app.listen(port, () => console.log(`App listening on port ${port}!`))
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+
+app.listen(port, function() {
+  console.log("Server started successfully");
+});
