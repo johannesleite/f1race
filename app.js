@@ -16,7 +16,9 @@ const apiUrl = 'https://ergast.com/api/f1/2022/next.json'
 app.get('/', (req, res) => {
     https.get(apiUrl, (response) => {
         response.on('data', (data) => {
-            const raceData = JSON.parse(data)
+          if (raceData.MRData.RaceTable.Races.length === 0) {
+            res.render('nodata');
+          } else {
             const nextRaceName = raceData.MRData.RaceTable.Races[0].raceName
             const nextRaceDate = raceData.MRData.RaceTable.Races[0].date
             const nextRaceTime = raceData.MRData.RaceTable.Races[0].time
@@ -32,8 +34,8 @@ app.get('/', (req, res) => {
                 time: convertedTime
             }
 
-            res.render('index', {raceItems: raceDataObj})
- 
+          res.render('index', {raceItems: raceDataObj})
+          }
         })
     })
     
