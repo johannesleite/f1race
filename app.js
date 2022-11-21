@@ -16,6 +16,7 @@ const apiUrl = 'https://ergast.com/api/f1/2022/next.json'
 app.get('/', (req, res) => {
     https.get(apiUrl, (response) => {
         response.on('data', (data) => {
+          const raceData = JSON.parse(data)
           if (raceData.MRData.RaceTable.Races.length === 0) {
             res.render('nodata');
           } else {
