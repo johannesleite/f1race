@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 
-const apiUrl = 'https://ergast.com/api/f1/2022/next.json'
+const apiUrl = 'https://ergast.com/api/f1/current/next.json'
 
 
 
